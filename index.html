@@ -9,8 +9,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
 </head>
-<body>
+<body >
 
   <a class="skip-link" href="#main">Skip to main content</a>
 
@@ -18,12 +21,12 @@
        SITE HEADER / NAVIGATION
   ====================================================== -->
   <header class="site-header" role="banner">
-    <div class="container">
-      <nav class="nav" aria-label="Main navigation">
+    <div class="container max-w-7xl mx-auto px-4">
+      <nav class="nav " aria-label="Main navigation">
 
         <a href="#home" class="nav__logo" aria-label="CG Healthcare Group — return to home">
           <span class="nav__logo-mark" aria-hidden="true">CG</span>
-          <span class="nav__logo-text">Healthcare Group</span>
+          <span class="nav__logo-text">Healthcare Group</span> 
         </a>
 
         <!-- CSS-only mobile toggle via checkbox sibling selector -->
@@ -121,7 +124,7 @@
          OUR APPROACH
     =================================================== -->
     <section id="approach" class="s-approach" aria-labelledby="approach-heading">
-      <div class="container">
+      <div class="container max-w-7xl mx-auto px-4">
         <header class="section-header">
           <h2 id="approach-heading" class="section-heading">Why CG Healthcare Group?</h2>
           <p class="section-sub">
@@ -140,7 +143,7 @@
           </article>
 
           <article class="approach-card">
-            <div class="approach-card__icon" aria-hidden="true">&#10686;</div>
+           
             <h3 class="approach-card__title">No One-Size-Fits-All</h3>
             <p>We don&rsquo;t believe everyone needs the same plan. Your doctors, your
               prescriptions, your budget &mdash; we listen to all of it before we ever
@@ -148,7 +151,6 @@
           </article>
 
           <article class="approach-card">
-            <div class="approach-card__icon" aria-hidden="true">&#129309;</div>
             <h3 class="approach-card__title">We Stay With You</h3>
             <p>Our relationship doesn&rsquo;t end when you sign up. We&rsquo;re here year-round
               for questions, annual plan reviews, and changes during Open Enrollment &mdash;
@@ -156,7 +158,6 @@
           </article>
 
           <article class="approach-card">
-            <div class="approach-card__icon" aria-hidden="true">&#9733;</div>
             <h3 class="approach-card__title">No Cost to You</h3>
             <p>Our guidance is completely free. We are compensated directly by the insurance
               carriers &mdash; so you receive expert, unbiased advice at no additional charge,
@@ -164,13 +165,14 @@
           </article>
         </div>
 
-        <div class="approach__cta">
+
+      </div>
+              <div class="approach__cta rounded-sm">
           <p>Have questions about the process? Talk to one of our agents &mdash;
             we&rsquo;ll walk you through every step, from your first question to your
             final plan.</p>
-          <a href="#consultation" class="btn btn--gold">Schedule a Free Consultation</a>
+          <a href="#consultation" class="bg-white rounded-lg shadow-lg px-4 py-2 inline-block text-[#37B38F] font-bold">Schedule a Free Consultation</a>
         </div>
-      </div>
     </section>
 
 
@@ -178,7 +180,7 @@
          SERVICES / COVERAGE TYPES
     =================================================== -->
     <section id="services" class="s-services" aria-labelledby="services-heading">
-      <div class="container">
+      <div class="container max-w-7xl mx-auto px-4">
         <header class="section-header">
           <h2 id="services-heading" class="section-heading">Medicare &amp; Health Coverage</h2>
           <p class="section-sub">
@@ -271,8 +273,9 @@
     <!-- ===================================================
          CALCULATOR LIBRARY
     =================================================== -->
-    <section id="calculators" class="s-calculators" aria-labelledby="calc-heading">
-      <div class="container">
+    <section id="calculators" class="s-calculators relative overflow-hidden" aria-labelledby="calc-heading" style="background-image:url('assest/bg1.jpg'); background-size:cover; background-position:center 40%; background-repeat:no-repeat;">
+      <div aria-hidden="true" class="absolute inset-0 pointer-events-none" style="background: linear-gradient(180deg, rgba(6,17,13,0.92) 0%, rgba(6,17,13,0.74) 50%, rgba(6,17,13,0.88) 100%);"></div>
+      <div class="container relative max-w-7xl mx-auto px-4">
         <header class="section-header section-header--light">
           <h2 id="calc-heading" class="section-heading section-heading--light">
             Free Calculator Library
@@ -283,167 +286,165 @@
           </p>
         </header>
 
-        <div class="mc-carousel" tabindex="0"
+        <div class="mc-carousel mb-12" tabindex="0"
              aria-roledescription="carousel"
              aria-label="Free Calculator Library">
           <div class="mc-carousel__viewport">
             <div class="mc-carousel__track">
 
-              <article class="calc-card">
-                <div class="calc-card__number" aria-hidden="true">01</div>
-                <h3 class="calc-card__title">ACA Health Insurance Qualification</h3>
-                <p class="calc-card__desc">Determine your eligibility for marketplace subsidies.
+              <article class="bg-black/30 backdrop-blur-[2px] border border-white/10 rounded-2xl p-6 flex flex-col gap-3 transition-[background-color,border-color,transform] duration-200 ease-[ease] hover:bg-black/50 hover:border-[rgba(201,168,76,0.5)] hover:-translate-y-0.5 focus-within:bg-black/50 focus-within:border-[rgba(201,168,76,0.5)] focus-within:-translate-y-0.5">
+                <div class="[font-family:var(--font-mono)] text-[0.8125rem] font-medium tracking-[0.12em] text-[#C9A84C]" aria-hidden="true">01</div>
+                <h3 class="[font-family:var(--font-serif)] text-[1.3125rem] font-semibold text-white leading-tight m-0">ACA Health Insurance Qualification</h3>
+                <p class="text-[0.9375rem] text-white/85 flex-grow max-w-none leading-[1.6]">Determine your eligibility for marketplace subsidies.
                   Covers all state-based exchanges and healthcare.gov states.</p>
-                <ul class="calc-card__inputs" aria-label="Key inputs">
-                  <li>State of residence</li>
-                  <li>Household size &amp; income</li>
-                  <li>Age &amp; tobacco use</li>
-                  <li>Plan tier (Bronze &ndash; Platinum)</li>
+                <ul class="list-none flex flex-col border border-white/[0.07] rounded-lg overflow-hidden my-1" aria-label="Key inputs">
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">State of residence</li>
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Household size &amp; income</li>
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Age &amp; tobacco use</li>
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Plan tier (Bronze &ndash; Platinum)</li>
                 </ul>
-                <a href="#consultation" class="btn btn--ghost-gold btn--sm">Get Started</a>
+                <a href="#consultation" class="btn btn--sm !bg-[rgba(0,0,0,0.3)] !border-white !text-white hover:!bg-white hover:!text-[#1C1A14] focus-visible:!bg-white focus-visible:!text-[#1C1A14]">Get Started</a>
               </article>
 
-              <article class="calc-card">
-                <div class="calc-card__number" aria-hidden="true">02</div>
-                <h3 class="calc-card__title">IRMAA Calculator</h3>
-                <p class="calc-card__desc">Calculate your Income-Related Monthly Adjustment Amount
+              <article class="bg-black/30 backdrop-blur-[2px] border border-white/10 rounded-2xl p-6 flex flex-col gap-3 transition-[background-color,border-color,transform] duration-200 ease-[ease] hover:bg-black/50 hover:border-[rgba(201,168,76,0.5)] hover:-translate-y-0.5 focus-within:bg-black/50 focus-within:border-[rgba(201,168,76,0.5)] focus-within:-translate-y-0.5">
+                <div class="[font-family:var(--font-mono)] text-[0.8125rem] font-medium tracking-[0.12em] text-[#C9A84C]" aria-hidden="true">02</div>
+                <h3 class="[font-family:var(--font-serif)] text-[1.3125rem] font-semibold text-white leading-tight m-0">IRMAA Calculator</h3>
+                <p class="text-[0.9375rem] text-white/85 flex-grow max-w-none leading-[1.6]">Calculate your Income-Related Monthly Adjustment Amount
                   &mdash; the premium surcharge on Parts B and D for higher-income enrollees.</p>
-                <ul class="calc-card__inputs" aria-label="Key inputs">
-                  <li>Tax filing status</li>
-                  <li>Modified Adjusted Gross Income (MAGI)</li>
+                <ul class="list-none flex flex-col border border-white/[0.07] rounded-lg overflow-hidden my-1" aria-label="Key inputs">
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Tax filing status</li>
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Modified Adjusted Gross Income (MAGI)</li>
                 </ul>
-                <a href="#consultation" class="btn btn--ghost-gold btn--sm">Get Started</a>
+                <a href="#consultation" class="btn btn--sm !bg-[rgba(0,0,0,0.3)] !border-white !text-white hover:!bg-white hover:!text-[#1C1A14] focus-visible:!bg-white focus-visible:!text-[#1C1A14]">Get Started</a>
               </article>
 
-              <article class="calc-card">
-                <div class="calc-card__number" aria-hidden="true">03</div>
-                <h3 class="calc-card__title">Enrollment Periods Calculator</h3>
-                <p class="calc-card__desc">Find your Initial Enrollment Period window and any
+              <article class="bg-black/30 backdrop-blur-[2px] border border-white/10 rounded-2xl p-6 flex flex-col gap-3 transition-[background-color,border-color,transform] duration-200 ease-[ease] hover:bg-black/50 hover:border-[rgba(201,168,76,0.5)] hover:-translate-y-0.5 focus-within:bg-black/50 focus-within:border-[rgba(201,168,76,0.5)] focus-within:-translate-y-0.5">
+                <div class="[font-family:var(--font-mono)] text-[0.8125rem] font-medium tracking-[0.12em] text-[#C9A84C]" aria-hidden="true">03</div>
+                <h3 class="[font-family:var(--font-serif)] text-[1.3125rem] font-semibold text-white leading-tight m-0">Enrollment Periods Calculator</h3>
+                <p class="text-[0.9375rem] text-white/85 flex-grow max-w-none leading-[1.6]">Find your Initial Enrollment Period window and any
                   Special Enrollment Period based on qualifying life events.</p>
-                <ul class="calc-card__inputs" aria-label="Key inputs">
-                  <li>Date of birth</li>
-                  <li>Part A start date</li>
-                  <li>Special circumstances (lost coverage, moved, etc.)</li>
-                  <li>Qualifying event date</li>
+                <ul class="list-none flex flex-col border border-white/[0.07] rounded-lg overflow-hidden my-1" aria-label="Key inputs">
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Date of birth</li>
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Part A start date</li>
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Special circumstances (lost coverage, moved, etc.)</li>
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Qualifying event date</li>
                 </ul>
-                <a href="#consultation" class="btn btn--ghost-gold btn--sm">Get Started</a>
+                <a href="#consultation" class="btn btn--sm !bg-[rgba(0,0,0,0.3)] !border-white !text-white hover:!bg-white hover:!text-[#1C1A14] focus-visible:!bg-white focus-visible:!text-[#1C1A14]">Get Started</a>
               </article>
 
-              <article class="calc-card">
-                <div class="calc-card__number" aria-hidden="true">04</div>
-                <h3 class="calc-card__title">Late Enrollment Penalty Calculator</h3>
-                <p class="calc-card__desc">Estimate the permanent monthly penalty added to your
+              <article class="bg-black/30 backdrop-blur-[2px] border border-white/10 rounded-2xl p-6 flex flex-col gap-3 transition-[background-color,border-color,transform] duration-200 ease-[ease] hover:bg-black/50 hover:border-[rgba(201,168,76,0.5)] hover:-translate-y-0.5 focus-within:bg-black/50 focus-within:border-[rgba(201,168,76,0.5)] focus-within:-translate-y-0.5">
+                <div class="[font-family:var(--font-mono)] text-[0.8125rem] font-medium tracking-[0.12em] text-[#C9A84C]" aria-hidden="true">04</div>
+                <h3 class="[font-family:var(--font-serif)] text-[1.3125rem] font-semibold text-white leading-tight m-0">Late Enrollment Penalty Calculator</h3>
+                <p class="text-[0.9375rem] text-white/85 flex-grow max-w-none leading-[1.6]">Estimate the permanent monthly penalty added to your
                   Part B or Part D premium if you missed your enrollment window.</p>
-                <ul class="calc-card__inputs" aria-label="Key inputs">
-                  <li>First eligible enrollment date</li>
-                  <li>Actual enrollment date</li>
-                  <li>Creditable coverage details</li>
-                  <li>Current Part D benchmark premium</li>
+                <ul class="list-none flex flex-col border border-white/[0.07] rounded-lg overflow-hidden my-1" aria-label="Key inputs">
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">First eligible enrollment date</li>
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Actual enrollment date</li>
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Creditable coverage details</li>
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Current Part D benchmark premium</li>
                 </ul>
-                <a href="#consultation" class="btn btn--ghost-gold btn--sm">Get Started</a>
+                <a href="#consultation" class="btn btn--sm !bg-[rgba(0,0,0,0.3)] !border-white !text-white hover:!bg-white hover:!text-[#1C1A14] focus-visible:!bg-white focus-visible:!text-[#1C1A14]">Get Started</a>
               </article>
 
-              <article class="calc-card">
-                <div class="calc-card__number" aria-hidden="true">05</div>
-                <h3 class="calc-card__title">Social Security Calculator</h3>
-                <p class="calc-card__desc">Estimate your monthly Social Security retirement benefit
+              <article class="bg-black/30 backdrop-blur-[2px] border border-white/10 rounded-2xl p-6 flex flex-col gap-3 transition-[background-color,border-color,transform] duration-200 ease-[ease] hover:bg-black/50 hover:border-[rgba(201,168,76,0.5)] hover:-translate-y-0.5 focus-within:bg-black/50 focus-within:border-[rgba(201,168,76,0.5)] focus-within:-translate-y-0.5">
+                <div class="[font-family:var(--font-mono)] text-[0.8125rem] font-medium tracking-[0.12em] text-[#C9A84C]" aria-hidden="true">05</div>
+                <h3 class="[font-family:var(--font-serif)] text-[1.3125rem] font-semibold text-white leading-tight m-0">Social Security Calculator</h3>
+                <p class="text-[0.9375rem] text-white/85 flex-grow max-w-none leading-[1.6]">Estimate your monthly Social Security retirement benefit
                   based on your earnings history and planned retirement age.</p>
-                <ul class="calc-card__inputs" aria-label="Key inputs">
-                  <li>Average annual earnings (highest 35 years)</li>
-                  <li>Birth year</li>
-                  <li>Planned retirement age</li>
-                  <li>Spousal benefit option</li>
+                <ul class="list-none flex flex-col border border-white/[0.07] rounded-lg overflow-hidden my-1" aria-label="Key inputs">
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Average annual earnings (highest 35 years)</li>
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Birth year</li>
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Planned retirement age</li>
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Spousal benefit option</li>
                 </ul>
-                <a href="#consultation" class="btn btn--ghost-gold btn--sm">Get Started</a>
+                <a href="#consultation" class="btn btn--sm !bg-[rgba(0,0,0,0.3)] !border-white !text-white hover:!bg-white hover:!text-[#1C1A14] focus-visible:!bg-white focus-visible:!text-[#1C1A14]">Get Started</a>
               </article>
 
-              <article class="calc-card">
-                <div class="calc-card__number" aria-hidden="true">06</div>
-                <h3 class="calc-card__title">Simple Retirement Calculator</h3>
-                <p class="calc-card__desc">Project how much you&rsquo;ll need in retirement and
+              <article class="bg-black/30 backdrop-blur-[2px] border border-white/10 rounded-2xl p-6 flex flex-col gap-3 transition-[background-color,border-color,transform] duration-200 ease-[ease] hover:bg-black/50 hover:border-[rgba(201,168,76,0.5)] hover:-translate-y-0.5 focus-within:bg-black/50 focus-within:border-[rgba(201,168,76,0.5)] focus-within:-translate-y-0.5">
+                <div class="[font-family:var(--font-mono)] text-[0.8125rem] font-medium tracking-[0.12em] text-[#C9A84C]" aria-hidden="true">06</div>
+                <h3 class="[font-family:var(--font-serif)] text-[1.3125rem] font-semibold text-white leading-tight m-0">Simple Retirement Calculator</h3>
+                <p class="text-[0.9375rem] text-white/85 flex-grow max-w-none leading-[1.6]">Project how much you&rsquo;ll need in retirement and
                   whether your current savings are on track to get you there.</p>
-                <ul class="calc-card__inputs" aria-label="Key inputs">
-                  <li>Current &amp; retirement age, life expectancy</li>
-                  <li>Pre-tax income &amp; replacement target</li>
-                  <li>Current savings &amp; monthly contribution</li>
-                  <li>Expected return &amp; inflation rate</li>
+                <ul class="list-none flex flex-col border border-white/[0.07] rounded-lg overflow-hidden my-1" aria-label="Key inputs">
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Current &amp; retirement age, life expectancy</li>
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Pre-tax income &amp; replacement target</li>
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Current savings &amp; monthly contribution</li>
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Expected return &amp; inflation rate</li>
                 </ul>
-                <a href="#consultation" class="btn btn--ghost-gold btn--sm">Get Started</a>
+                <a href="#consultation" class="btn btn--sm !bg-[rgba(0,0,0,0.3)] !border-white !text-white hover:!bg-white hover:!text-[#1C1A14] focus-visible:!bg-white focus-visible:!text-[#1C1A14]">Get Started</a>
               </article>
 
-              <article class="calc-card">
-                <div class="calc-card__number" aria-hidden="true">07</div>
-                <h3 class="calc-card__title">Annuity Calculator</h3>
-                <p class="calc-card__desc">Model immediate, deferred, fixed, or variable annuity
+              <article class="bg-black/30 backdrop-blur-[2px] border border-white/10 rounded-2xl p-6 flex flex-col gap-3 transition-[background-color,border-color,transform] duration-200 ease-[ease] hover:bg-black/50 hover:border-[rgba(201,168,76,0.5)] hover:-translate-y-0.5 focus-within:bg-black/50 focus-within:border-[rgba(201,168,76,0.5)] focus-within:-translate-y-0.5">
+                <div class="[font-family:var(--font-mono)] text-[0.8125rem] font-medium tracking-[0.12em] text-[#C9A84C]" aria-hidden="true">07</div>
+                <h3 class="[font-family:var(--font-serif)] text-[1.3125rem] font-semibold text-white leading-tight m-0">Annuity Calculator</h3>
+                <p class="text-[0.9375rem] text-white/85 flex-grow max-w-none leading-[1.6]">Model immediate, deferred, fixed, or variable annuity
                   scenarios to understand projected income streams in retirement.</p>
-                <ul class="calc-card__inputs" aria-label="Key inputs">
-                  <li>Annuity type &amp; initial investment</li>
-                  <li>Expected return &amp; years to payout</li>
-                  <li>Payout period &amp; payment frequency</li>
-                  <li>Inflation adjustment &amp; beneficiary options</li>
+                <ul class="list-none flex flex-col border border-white/[0.07] rounded-lg overflow-hidden my-1" aria-label="Key inputs">
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Annuity type &amp; initial investment</li>
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Expected return &amp; years to payout</li>
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Payout period &amp; payment frequency</li>
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Inflation adjustment &amp; beneficiary options</li>
                 </ul>
-                <a href="#consultation" class="btn btn--ghost-gold btn--sm">Get Started</a>
+                <a href="#consultation" class="btn btn--sm !bg-[rgba(0,0,0,0.3)] !border-white !text-white hover:!bg-white hover:!text-[#1C1A14] focus-visible:!bg-white focus-visible:!text-[#1C1A14]">Get Started</a>
               </article>
 
-              <article class="calc-card">
-                <div class="calc-card__number" aria-hidden="true">08</div>
-                <h3 class="calc-card__title">IUL Calculator</h3>
-                <p class="calc-card__desc">See how an Indexed Universal Life policy could build
+              <article class="bg-black/30 backdrop-blur-[2px] border border-white/10 rounded-2xl p-6 flex flex-col gap-3 transition-[background-color,border-color,transform] duration-200 ease-[ease] hover:bg-black/50 hover:border-[rgba(201,168,76,0.5)] hover:-translate-y-0.5 focus-within:bg-black/50 focus-within:border-[rgba(201,168,76,0.5)] focus-within:-translate-y-0.5">
+                <div class="[font-family:var(--font-mono)] text-[0.8125rem] font-medium tracking-[0.12em] text-[#C9A84C]" aria-hidden="true">08</div>
+                <h3 class="[font-family:var(--font-serif)] text-[1.3125rem] font-semibold text-white leading-tight m-0">IUL Calculator</h3>
+                <p class="text-[0.9375rem] text-white/85 flex-grow max-w-none leading-[1.6]">See how an Indexed Universal Life policy could build
                   savings and generate tax-free retirement income from age 67 through 100.</p>
-                <ul class="calc-card__inputs" aria-label="Key inputs">
-                  <li>Age (30&ndash;55 range)</li>
-                  <li>Monthly savings ($300 minimum)</li>
-                  <li class="calc-card__output">
+                <ul class="list-none flex flex-col border border-white/[0.07] rounded-lg overflow-hidden my-1" aria-label="Key inputs">
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Age (30&ndash;55 range)</li>
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Monthly savings ($300 minimum)</li>
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white/90 italic py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white/90 before:shrink-0 before:text-base before:leading-none">
                     Outputs: initial coverage, projected cash value at 67,
                     projected tax-free annual income (non-guaranteed 8% growth)
                   </li>
                 </ul>
-                <a href="#consultation" class="btn btn--ghost-gold btn--sm">Get Started</a>
+                <a href="#consultation" class="btn btn--sm !bg-[rgba(0,0,0,0.3)] !border-white !text-white hover:!bg-white hover:!text-[#1C1A14] focus-visible:!bg-white focus-visible:!text-[#1C1A14]">Get Started</a>
               </article>
 
-              <article class="calc-card">
-                <div class="calc-card__number" aria-hidden="true">09</div>
-                <h3 class="calc-card__title">Final Expenses Calculator</h3>
-                <p class="calc-card__desc">Estimate the real cost of end-of-life arrangements
+              <article class="bg-black/30 backdrop-blur-[2px] border border-white/10 rounded-2xl p-6 flex flex-col gap-3 transition-[background-color,border-color,transform] duration-200 ease-[ease] hover:bg-black/50 hover:border-[rgba(201,168,76,0.5)] hover:-translate-y-0.5 focus-within:bg-black/50 focus-within:border-[rgba(201,168,76,0.5)] focus-within:-translate-y-0.5">
+                <div class="[font-family:var(--font-mono)] text-[0.8125rem] font-medium tracking-[0.12em] text-[#C9A84C]" aria-hidden="true">09</div>
+                <h3 class="[font-family:var(--font-serif)] text-[1.3125rem] font-semibold text-white leading-tight m-0">Final Expenses Calculator</h3>
+                <p class="text-[0.9375rem] text-white/85 flex-grow max-w-none leading-[1.6]">Estimate the real cost of end-of-life arrangements
                   &mdash; burial or cremation &mdash; with inflation projections to help you
                   plan ahead.</p>
-                <ul class="calc-card__inputs" aria-label="Key inputs">
-                  <li>Burial vs. cremation preference</li>
-                  <li>Location type</li>
-                  <li>Inflation projection years</li>
-                  <li>Itemized cost breakdown (casket, plot, services, etc.)</li>
+                <ul class="list-none flex flex-col border border-white/[0.07] rounded-lg overflow-hidden my-1" aria-label="Key inputs">
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Burial vs. cremation preference</li>
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Location type</li>
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Inflation projection years</li>
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Itemized cost breakdown (casket, plot, services, etc.)</li>
                 </ul>
-                <a href="#consultation" class="btn btn--ghost-gold btn--sm">Get Started</a>
+                <a href="#consultation" class="btn btn--sm !bg-[rgba(0,0,0,0.3)] !border-white !text-white hover:!bg-white hover:!text-[#1C1A14] focus-visible:!bg-white focus-visible:!text-[#1C1A14]">Get Started</a>
               </article>
 
-              <article class="calc-card">
-                <div class="calc-card__number" aria-hidden="true">10</div>
-                <h3 class="calc-card__title">Medicare Savings Plan Calculator</h3>
-                <p class="calc-card__desc">Find out if you qualify for a Medicare Savings Program
+              <article class="bg-black/30 backdrop-blur-[2px] border border-white/10 rounded-2xl p-6 flex flex-col gap-3 transition-[background-color,border-color,transform] duration-200 ease-[ease] hover:bg-black/50 hover:border-[rgba(201,168,76,0.5)] hover:-translate-y-0.5 focus-within:bg-black/50 focus-within:border-[rgba(201,168,76,0.5)] focus-within:-translate-y-0.5">
+                <div class="[font-family:var(--font-mono)] text-[0.8125rem] font-medium tracking-[0.12em] text-[#C9A84C]" aria-hidden="true">10</div>
+                <h3 class="[font-family:var(--font-serif)] text-[1.3125rem] font-semibold text-white leading-tight m-0">Medicare Savings Plan Calculator</h3>
+                <p class="text-[0.9375rem] text-white/85 flex-grow max-w-none leading-[1.6]">Find out if you qualify for a Medicare Savings Program
                   that helps pay Part A and B premiums, deductibles, and copayments.</p>
-                <ul class="calc-card__inputs" aria-label="Key inputs">
-                  <li>State of residence (standard / AK / HI)</li>
-                  <li>Household size</li>
-                  <li>Monthly income</li>
-                  <li>Countable assets</li>
+                <ul class="list-none flex flex-col border border-white/[0.07] rounded-lg overflow-hidden my-1" aria-label="Key inputs">
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">State of residence (standard / AK / HI)</li>
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Household size</li>
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Monthly income</li>
+                  <li class="[font-family:var(--font-mono)] text-[0.75rem] text-white py-[0.4rem] px-3 border-b border-white/[0.06] bg-black/45 flex items-baseline gap-2 leading-[1.5] last:border-b-0 before:content-['›'] before:text-white before:shrink-0 before:text-base before:leading-none">Countable assets</li>
                 </ul>
-                <a href="#consultation" class="btn btn--ghost-gold btn--sm">Get Started</a>
+                <a href="#consultation" class="btn btn--sm !bg-[rgba(0,0,0,0.3)] !border-white !text-white hover:!bg-white hover:!text-[#1C1A14] focus-visible:!bg-white focus-visible:!text-[#1C1A14]">Get Started</a>
               </article>
 
             </div>
           </div>
           <div class="mc-carousel__controls">
-            <button class="mc-carousel__btn mc-carousel__btn--prev" aria-label="Previous calculators">&#8249;</button>
-            <div class="mc-carousel__progress" role="presentation" aria-hidden="true">
-              <div class="mc-carousel__progress-fill"></div>
+            <button class="mc-carousel__btn mc-carousel__btn--prev !bg-black/40 !border-2 !border-white/20 !text-white hover:!bg-[#C9A84C] hover:!border-[#C9A84C] hover:!text-[#0F1A0D] focus-visible:!bg-[#C9A84C] focus-visible:!border-[#C9A84C] focus-visible:!text-[#0F1A0D]" aria-label="Previous calculators">&#8249;</button>
+            <div class="mc-carousel__progress !bg-white/15" role="presentation" aria-hidden="true">
+              <div class="mc-carousel__progress-fill !bg-[#C9A84C]"></div>
             </div>
-            <button class="mc-carousel__btn mc-carousel__btn--next" aria-label="Next calculators">&#8250;</button>
+            <button class="mc-carousel__btn mc-carousel__btn--next !bg-black/40 !border-2 !border-white/20 !text-white hover:!bg-[#C9A84C] hover:!border-[#C9A84C] hover:!text-[#0F1A0D] focus-visible:!bg-[#C9A84C] focus-visible:!border-[#C9A84C] focus-visible:!text-[#0F1A0D]" aria-label="Next calculators">&#8250;</button>
           </div>
         </div>
 
-        <div class="calc__footer-cta">
-          <a href="#consultation" class="btn btn--gold">Schedule a Free Consultation</a>
-        </div>
+
 
       </div>
     </section>
@@ -452,7 +453,7 @@
          WEBINARS
     =================================================== -->
     <section id="webinars" class="s-webinars" aria-labelledby="webinar-heading">
-      <div class="container">
+      <div class="container max-w-7xl mx-auto px-4">
         <header class="section-header">
           <h2 id="webinar-heading" class="section-heading">Free Medicare Education Webinars</h2>
           <p class="section-sub">
@@ -549,7 +550,7 @@
          REVIEWS
     =================================================== -->
     <section id="reviews" class="s-reviews" aria-labelledby="reviews-heading">
-      <div class="container">
+      <div class="container max-w-7xl mx-auto px-4">
         <header class="section-header">
           <div class="reviews__aggregate" role="img" aria-label="Five stars — 400 plus Google reviews">
             <span class="reviews__stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
@@ -608,11 +609,6 @@
           </article>
 
         </div>
-
-        <p class="reviews__proto-note">
-          <em>These are placeholder testimonials for prototype review.
-          The live site will display the Google Reviews widget.</em>
-        </p>
       </div>
     </section>
 
@@ -672,8 +668,8 @@
     <!-- ===================================================
          ABOUT
     =================================================== -->
-    <section id="about" class="s-about" aria-labelledby="about-heading">
-      <div class="container about__inner">
+    <section id="about" class="s-about bg-gray-700" aria-labelledby="about-heading">
+      <div class="container about__inner max-w-7xl mx-auto px-4">
 
         <div class="about__content">
           <h2 id="about-heading" class="section-heading section-heading--light">
@@ -755,7 +751,7 @@
        FOOTER
   ====================================================== -->
   <footer class="site-footer" role="contentinfo">
-    <div class="container">
+    <div class="container max-w-7xl mx-auto px-4">
 
       <div class="footer__grid">
         <div class="footer__brand">
